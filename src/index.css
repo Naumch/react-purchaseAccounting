@@ -42,6 +42,8 @@ td span{
   cursor: url(../public/images/pencil.png), auto;
 }
 
+
+
 .tableBottom-borderNone {
   border-bottom: none;
   cursor: pointer;
@@ -49,4 +51,162 @@ td span{
 
 .day {
   font-size: 18px;
+}
+
+.container {
+  max-width: 1200px;
+	margin: 0 auto;
+	height: 100vh;
+	padding: 80px 0;
+	display: flex;
+}
+
+@media (max-width: 1240px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 655px) {
+  .container {
+    padding: 20px 0;
+  }
+}
+
+.wrap {
+  display: flex;
+}
+
+@media (max-width: 655px) {
+  .wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding-top: 36px;
+}
+
+@media (max-width: 655px) {
+  .input-wrapper{
+    width: 100%;
+  }
+}
+
+@media (max-width: 340px) {
+  .input-wrapper {
+    width: 90%;
+  }
+}
+
+.input {
+  margin-bottom: 16px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid;
+  letter-spacing: 1px;
+  padding: 6px 18px;
+}
+
+.input__btn-add {
+  background-color: #ff9900;
+  border: none;
+  border-radius: 50%;
+  font-size: 28px;
+  transition: 0.5s;
+  width: 36px;
+  height: 36px;
+  align-self: flex-end;
+}
+
+.input__btn-add:hover {
+  font-size: 32px;
+  width: 40px;
+  height: 40px;
+}
+
+.table-wrapper {
+  width: 40%;
+	display: flex;
+  flex-direction: column;
+	margin-left: 16px;
+}
+
+@media (max-width: 655px) {
+  .table-wrapper {
+    width: 100%;
+    margin: 16px 0;
+  }
+}
+
+.table-filter__select {
+  margin-bottom: 4px;
+  border: none;
+  border-radius: 12px;
+  letter-spacing: 1px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.table-calendar__arrows {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.table-calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.table-calendar__day-wrap {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.table-calendar__day {
+  font-size: 16px;
+  width: 100%;
+  height: 80%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.currentDay {
+  background-color: #a8cff1;
+}
+
+.selectedDay {
+  background-color: #8595a8;
+}
+
+.table-rows__btn-delete {
+  border-radius: 50%;
+	width: 24px;
+	border: none;
+	transition: .5s;
+	background-color: #fff;
+}
+
+.table-rows__btn-delete:hover {
+  color: #ee381d;
+	font-size: 24px;
+}
+
+.table-rows__input-edit {
+  max-width: 104px;
+	border-radius: 8px;
+	padding: 4px;
+	border: 1px solid black;
+}
+
+.table__total-wrap {
+  margin: 10px;
 }

@@ -1,6 +1,6 @@
 import { Chart } from 'react-google-charts';
  
-function ChartTa({ filteredProducts, filter, categories }) {
+function MyChart({ filteredProducts, filter, categories }) {
   function getSum(category) {
     let sum = 0;
     for (let prod of filteredProducts) {
@@ -43,4 +43,4 @@ function ChartTa({ filteredProducts, filter, categories }) {
   );
 }
 
-export default ChartTa;
+export default MyChart;

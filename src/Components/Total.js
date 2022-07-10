@@ -1,8 +1,4 @@
-import styled from 'styled-components';
-
-const TotalWrap = styled.div`
-  margin: 10px;
-`;
+import React from "react";
 
 function Total({ filteredProducts }) {
 
@@ -10,7 +6,11 @@ function Total({ filteredProducts }) {
     return sum + Number(prod.fields[2].value);
   }, 0);
 
-  return <TotalWrap>Общий итог: &nbsp; {result} руб.</TotalWrap>;
+  return (
+    <div className='table__total-wrap'>
+      Общий итог: &nbsp; {result} руб.
+    </div>
+  )
 }
 
 export default Total;

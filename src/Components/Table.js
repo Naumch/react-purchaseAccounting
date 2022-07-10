@@ -4,24 +4,13 @@ import Rows from './Rows';
 import Total from './Total';
 import FakeTable from './FakeTable';
 
-const Container = styled.div`
-	width: 40%;
-	display: flex;
-  flex-direction: column;
-	margin-left: 16px;
-	@media (max-width: 655px) {
-		width: 100%;
-		margin: 16px 0;
-	}
-`;
-
 const Display = styled.div`
 	display: ${props => props.filteredProducts.length === 0 ? 'none' : 'block'};
 `;
 
 function Table({ products, setProducts, categories, filter, setFilter, unix, setUnix, filteredProducts }) {
 	
-  return <Container>
+  return <div className='table-wrapper'>
 		<TableFilter 
 			filter={filter}
 			setFilter={setFilter}
@@ -41,7 +30,7 @@ function Table({ products, setProducts, categories, filter, setFilter, unix, set
 			</table>
 			<Total filteredProducts={filteredProducts}/>
 		</Display>
-	</Container>;
+	</div>;
 }
 
 export default Table;

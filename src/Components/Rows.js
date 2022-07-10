@@ -1,24 +1,4 @@
-import styled from 'styled-components';
-import '../index.css';
-
-const Button = styled.button`
-	border-radius: 50%;
-	width: 24px;
-	border: none;
-	transition: .5s;
-	background-color: #fff;
-	&:hover {
-    color: #ee381d;
-		font-size: 24px;
-  }
-`;
-
-const Input = styled.input`
-	max-width: 104px;
-	border-radius: 8px;
-	padding: 4px;
-	border: 1px solid black;
-`;
+import React from "react";
 
 function Rows({ products, setProducts, filteredProducts }) {
 	
@@ -91,32 +71,46 @@ function Rows({ products, setProducts, filteredProducts }) {
 			let elem;
 			
 			if (!field.isEdit) {
-				elem = <span onClick={() => startEdit(prod.unix, prod.id, field.prop)}>
+				elem = (
+					<span onClick={() => startEdit(prod.unix, prod.id, field.prop)}>
 						{field.value}
 					</span>
+				)
 			} else {
-				elem = <Input
+				elem = (
+					<input 
+						className='table-rows__input-edit'
 						value={field.value}
 						onChange={(event) => changeCell(prod.unix, prod.id, field.prop, event)}
 						onBlur={() => endEdit(prod.unix, prod.id, field.prop)}
 						onKeyDown={(event) => onKeyDown(prod.unix, prod.id, field.prop, event)}
 					/>
+				)
 			}
 			
 			return <td key={field.prop}>{elem}</td>;
 		});
 		
-		return <tr key={prod.id}>
-			{cells}
-			<td className='tableBottom-borderNone'>
-				<Button onClick={() => remItem(prod.id)}>&#215;</Button> 
-			</td>
-		</tr>;
+		return (
+			<tr key={prod.id}>
+				{cells}
+				<td className='tableBottom-borderNone'>
+					<button 
+						className='table-rows__btn-delete' 
+						onClick={() => remItem(prod.id)}
+					>
+						&#215;
+					</button> 
+				</td>
+			</tr>
+		)
 	});
 
-  return <tbody>
-    {rows}
-  </tbody>;
+  return (
+		<tbody>
+			{rows}
+		</tbody>
+	)
 }
 
 export default Rows;

@@ -8,9 +8,11 @@ function Datalist({ categories }) {
     )
   });
 
-  return <datalist id="category">
-    {options}
-  </datalist>;
+  return (
+    <datalist id="category">
+      {options}
+    </datalist>
+  )
 }
 
 export default Datalist;
