@@ -55,6 +55,51 @@ const initProducts = [
 			{prop: 'cost', value: '5000', isEdit: false}
 		]
 	},
+	{
+		unix: '1657400400', 
+    id: nanoid(),
+		fields: [
+			{prop: 'name', value: 'Сок', isEdit: false},
+			{prop: 'category', value: 'Продукты', isEdit: false},
+			{prop: 'cost', value: '100', isEdit: false}
+		]
+	},
+	{
+		unix: '1657400400', 
+    id: nanoid(),
+		fields: [
+			{prop: 'name', value: 'Яйца', isEdit: false},
+			{prop: 'category', value: 'Продукты', isEdit: false},
+			{prop: 'cost', value: '78', isEdit: false}
+		]
+	},
+	{
+		unix: '1657400400', 
+    id: nanoid(),
+		fields: [
+			{prop: 'name', value: 'Конфеты', isEdit: false},
+			{prop: 'category', value: 'Продукты', isEdit: false},
+			{prop: 'cost', value: '254', isEdit: false}
+		]
+	},
+	{
+		unix: '1657400400', 
+    id: nanoid(),
+		fields: [
+			{prop: 'name', value: 'Вкусняшка', isEdit: false},
+			{prop: 'category', value: 'Животные', isEdit: false},
+			{prop: 'cost', value: '300', isEdit: false}
+		]
+	},
+	{
+		unix: '1657400400', 
+    id: nanoid(),
+		fields: [
+			{prop: 'name', value: 'Такси', isEdit: false},
+			{prop: 'category', value: 'Транспорт', isEdit: false},
+			{prop: 'cost', value: '234', isEdit: false}
+		]
+	},
 ];
 
 export default initProducts;

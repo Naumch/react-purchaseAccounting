@@ -5,6 +5,12 @@
   margin: 0;
 }
 
+@media (max-width: 436px) {
+  *, *::after, *::before {
+    font-size: 16px;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -25,6 +31,10 @@ button {
   background-color: transparent;
 }
 
+input::placeholder {
+  font-size: 14px;
+}
+
 table {
   border-radius: 12px;
   border: 1px solid;
@@ -42,8 +52,6 @@ td span{
   cursor: url(../public/images/pencil.png), auto;
 }
 
-
-
 .tableBottom-borderNone {
   border-bottom: none;
   cursor: pointer;
@@ -59,10 +67,12 @@ td span{
 	height: 100vh;
 	padding: 80px 0;
 	display: flex;
+  justify-content: space-between;
 }
 
 @media (max-width: 1240px) {
   .container {
+    padding: 60px 0;
     flex-direction: column;
     align-items: center;
   }
@@ -88,7 +98,7 @@ td span{
 .input-wrapper {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 220px;
   padding-top: 36px;
 }
 
@@ -98,9 +108,9 @@ td span{
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 436px) {
   .input-wrapper {
-    width: 90%;
+    width: 280px;
   }
 }
 
@@ -131,16 +141,33 @@ td span{
 }
 
 .table-wrapper {
-  width: 40%;
+  width: 380px;
 	display: flex;
   flex-direction: column;
 	margin-left: 16px;
 }
 
+@media (max-width: 1240px) {
+  .table-wrapper {
+    margin-left: 88px;
+  }
+}
+
+@media (max-width: 760px) {
+  .table-wrapper {
+    margin-left: 40px;
+  }
+}
+
 @media (max-width: 655px) {
   .table-wrapper {
-    width: 100%;
-    margin: 16px 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 436px) {
+  .table-wrapper {
+    width: 280px;
   }
 }
 

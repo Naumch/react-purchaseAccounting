@@ -15,10 +15,8 @@ function Table({ products, setProducts, categories, filter, setFilter, unix, set
 				products={products}
 			/>
 			{filteredProducts.length === 0 
-				? <div>
-						<p>Покупок пока не было...</p>
-					</div>
-				: <div>
+				? <p>Покупок пока не было...</p>
+				: <>
 						<table>
 							<Rows 
 								products={products}
@@ -27,7 +25,7 @@ function Table({ products, setProducts, categories, filter, setFilter, unix, set
 							/>
 						</table>
 						<Total filteredProducts={filteredProducts}/>
-					</div>
+					</>
 			}
 		</div>
 	)

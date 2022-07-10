@@ -1,6 +1,7 @@
 import { Chart } from 'react-google-charts';
  
 function MyChart({ filteredProducts, filter, categories }) {
+
   function getSum(category) {
     let sum = 0;
     for (let prod of filteredProducts) {
@@ -28,9 +29,7 @@ function MyChart({ filteredProducts, filter, categories }) {
     ...result
   ];
   
-  const options = {
-    
-  };
+  const options = {};
 
   return (
     <Chart
@@ -38,7 +37,7 @@ function MyChart({ filteredProducts, filter, categories }) {
       data={data}
       options={options}
       height={"300px"}
-      width={"70%"}
+      width={"100%"}
     />
   );
 }
