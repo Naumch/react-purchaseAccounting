@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-purchaseAccounting/static/css/main.5f06c86b.css",
-    "main.js": "/react-purchaseAccounting/static/js/main.81117642.js",
+    "main.js": "/react-purchaseAccounting/static/js/main.597edb75.js",
     "index.html": "/react-purchaseAccounting/index.html",
     "main.5f06c86b.css.map": "/react-purchaseAccounting/static/css/main.5f06c86b.css.map",
-    "main.81117642.js.map": "/react-purchaseAccounting/static/js/main.81117642.js.map"
+    "main.597edb75.js.map": "/react-purchaseAccounting/static/js/main.597edb75.js.map"
   },
   "entrypoints": [
     "static/css/main.5f06c86b.css",
-    "static/js/main.81117642.js"
+    "static/js/main.597edb75.js"
   ]
 }
